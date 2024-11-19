@@ -1,0 +1,27 @@
+
+
+mkdir 
+
+pwd
+
+ls
+
+cd directory_name
+
+touch file_name
+code . 
+
+# -------------
+
+git init 
+git add .
+git commit -m"commit name" 
+
+git log 
+
+git status 
+
+
+git clone repo_url
+
+
