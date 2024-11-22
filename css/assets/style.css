@@ -1,0 +1,128 @@
+/* body{
+    background: #000;
+} */
+
+/*
+    comment
+*/
+
+h1.ars{
+    text-align: center;
+}
+
+
+
+/* body{
+    background: rgb(3, 3, 8);
+} */
+
+body{
+    background: #111;
+}
+h5{
+    /* margin: 100px 50px 20px 10px; */
+    padding: 20px 10px 30px 40px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    padding-top: 2px;
+    padding-bottom: 30;
+    padding-left: 3px;
+}
+
+p{
+    color: red;
+    font-size: 20px;
+    text-transform: lowercase;
+    line-height: 2;
+    text-align: justify;
+    /* letter-spacing: 3px; */
+    /* text-decoration: line-through; */
+    font-family: "Roboto", serif;
+
+}
+
+p.ars{
+    text-decoration: line-through;
+}
+
+a{
+    margin: 50px;
+    display: inline-block;
+    background: red;
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    /* border: 2px solid green; */
+    border-radius: 30px;
+}
+
+a:hover{
+    background: green;
+}
+
+a:active{
+    background: yellow;
+}
+
+#parentDiv{
+    width: 300px;
+    height: 150px;
+    background: green;
+    position: relative;
+}
+
+#childDiv{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    /* right: 20px;
+    bottom: 10px; */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#argParent{
+    width: 300px;
+    height: 150px;
+    background: #6FA7D8;
+    position: relative;
+}
+
+#argChild{
+    height: 60px;
+    background: #FFF;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#middle{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    border-radius: 50%;
+    top: 5%;
+    left: 40%;
+}
+
+h3.text{
+    color: #fff;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
