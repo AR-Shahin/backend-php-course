@@ -126,3 +126,59 @@ h3.text{
     width: 90%;
     margin: 0 auto;
 }
+
+#ars{
+    height: 200px;
+    width: 100px;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body{
+    background: #fff;
+}
+.ourHeading2{
+    z-index: 10!important;
+}
+
+.box{
+    height: 150px;
+    width: 100px;
+    border:1px solid red;
+    overflow: hidden;
+    /* overflow-y: ;
+    overflow-x: ; */
+
+    /* transform: rotate(10deg); */
+    /* transform: scale(1); */
+
+    /* transform: skew(-30deg); */
+
+    animation: test 5s infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+
+@keyframes test{
+    0%{
+        background: #000;
+    }
+
+    50%{
+        background: green;
+    }
+
+
+    70%{
+        background: red;
+    }
+
+    100%{
+        background: #000;
+    }
+}
+
+
