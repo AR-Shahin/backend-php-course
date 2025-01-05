@@ -50,3 +50,50 @@ header .fa-twitter{
 .card_box img{
     margin-bottom: 15px;
 }
+
+.bg_light{
+    background: #fff;
+}
+#approch_section{
+    background: #F3F3F3;
+}
+
+.content{
+    padding: 80px 60px;
+}
+
+.img_section{
+    position:relative;
+}
+.side_content{
+    width: 100px;
+    height: 100px;
+    background-color: #DE2B24;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    right: -10%;
+    top: 30%;
+}
+
+.side_content.another{
+    left: -10%!important;
+    top: 30%;
+}
+
+.gallery{
+    background: #DE2B24;
+    color: #fff;
+}
+
+.bg_pink{
+    background: #F35E59;
+    text-align: center;
+}
+
+.gallery_content{
+    padding-top: 70px;
+}
