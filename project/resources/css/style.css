@@ -97,3 +97,65 @@ header .fa-twitter{
 .gallery_content{
     padding-top: 70px;
 }
+
+.getInTouch{
+    background: #1287BF;
+    color: #fff;
+}
+
+.main_form{
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    color: #111;
+}
+
+.contact_icon{
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    line-height: 1;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer{
+    background: #2A2A2A;
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+  
+}
+.footer ul li{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    margin: 5px; 
+}
+
+.footer ul li a{
+    color: #fff;
+    padding: 6px;
+    display: inline-block;
+}
+.footer form{
+    width: 50%;
+    margin: 0 auto;
+}
+.footer form input{
+    background: transparent!important;
+    margin-bottom: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    background: #515151;
+}
