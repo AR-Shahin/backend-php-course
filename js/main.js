@@ -2,7 +2,10 @@
 
 // var varName = "Shahin";
 
-var pi = 3.1416
+// varName = 120
+
+// var pi = 3.1416
+
 
 
 let person = {
@@ -78,13 +81,66 @@ let nums = [10,30,"ars",person];
 // }
 
 
-class Test{
-    a(){
-        console.log("A")
-    }
-}
+// class Test{
+//     a(){
+//         console.log("A")
+//     }
+// }
 
-let c = new Test();
+// let c = new Test();
 
-c.a();
+// c.a();
 
+
+
+// let ourH1 = document.getElementById("heading");
+// let title = document.getElementsByClassName("title");
+// let h1 = document.getElementsByTagName("h1");
+
+let title = document.querySelector("h1");
+let btn = document.getElementById("btn")
+let p = document.getElementsByTagName("p")[0];
+
+let add = document.getElementById("add");
+//let remove = document.getElementById("remove");
+let tbody = document.getElementsByTagName("tbody")[0];
+
+// title.innerText = "changed title";
+// title.innerHTML = "<i>hello</i>"
+
+title.style.color = "red";
+title.style.marginTop = "100px";
+
+// title.classList.add("tansform");
+// title.classList.remove("")
+// console.log(title);
+
+// btn.addEventListener("click", function(){
+//     title.classList.toggle("tansform");
+//     p.classList.toggle("d-none");
+// });
+
+add.addEventListener("click", function(){
+    let tr = document.createElement("tr");
+    let h = "<td></td>";
+    let html = `
+                <td>1</td>
+                <td>John Doe</td>
+            `;
+    tr.innerHTML = html;
+
+    tbody.appendChild(tr);
+});
+
+
+
+let jH1 = $("#heading");
+
+
+jH1.css("color", "blue");
+
+
+
+$("#btn").click(function(){
+    $("#heading").toggleClass("tansform");
+})
