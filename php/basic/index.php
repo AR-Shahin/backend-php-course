@@ -1,81 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <?php
+    echo "Hello I am form HTML";
+    ?>
+    
+</body>
+</html>
+
 <?php
 
+// $jekhanthekeKhujbo = [10,20,30,"shahin",3.3]; // 1000
+// $num2 = [
+//     [1,2,3],
+//     [2,3,4,[1,2,3]],
+// ];
+
+// $users = [
+//     "id" => 101,
+//     "name" => "Shahin"
+// ];
 
 
-
-
-
-$name = "Shahin" ;
-// $name = 100;
-
-//echo gettype($name);
-// var_dump($name);
-
-// if (0)
-// {
-//     echo "Inside if";
-// }elseif(0){
-//     echo "Inside elseif";
+// for($i = 0;$i< count($num1);$i++){
+//     if($num1[$i] == 100){
+//         echo "Found 10 in array num1 at index: $i \n";
+//     }
 // }
-// else{
-//     echo "Inside else";
-// }
-
-// switch("case"){
-//     case 1:
-//         echo "Case 1";
-//         break;
-//     default:
-//     echo "Default";
+// $jakeKhujbo = 100;
+// if(in_array($jakeKhujbo,$jekhanthekeKhujbo)){
+//     echo "Found 10 in array num1 using in_array function \n";
+// }else{
+//     echo "Not found 10 in array num1 \n";
 // }
 
 
-function add(int $num1, int $num2) : int{
-    return $num1 + $num2;
-}
+$Hashpass = password_hash("1234",PASSWORD_DEFAULT);
+$actualPass = "1234";
 
-$sub = fn ($a,$b) => $a - $b;
-
-
-$newAdd = $sub;
-// echo "Summation is  " . add(10,20);
-
-// function sayHi($name)  {
-//     echo "HI " . $name;
+//echo $Hashpass;
+// if(password_verify($actualPass,$Hashpass)){
+//     echo "Valid Password";
+// }else{
+//     echo "Invalid Password";
 // }
 
-$sayHi = fn ($name) => "Hi " . $name;
-function doTask($name, $task){
-    echo $task($name);
-}
+// $a = base64_encode("ars");
 
-// doTask("Shahin",$sayHi);
+// echo $a;
+echo " ";
+// echo base64_decode($a);
 
-// doTask("Test",function($name ){
-//     echo "New thing... " . $name;
-// });
-
-function test(...$vars)  {
-    var_dump($vars);
-}
+// foreach($users as $key => $value){
+//     echo "$key : $value <br>";
+// }
 
 
-function abc($num1,$name)  {
-    echo "Num " . $num1  . "<br>";
-    echo "name " . $name  . "<br>";
-}
 
-//abc(10,"shahin");
-abc(name:"name",num1:30);
-//test("a","b");
-// test(1,2,3,4,5);
-//echo "subscration is " . $newAdd(10,5);
+// $ars = "anisur#rahman#shahin";
 
-// print_r($name);
+// $nameArray = explode("#",$ars);
 
-exit();
+// for($i = 0;$i<count($nameArray);$i++){
+//     echo "$nameArray[$i] <br>";
+// }
+
+$nums = [10,20,40];
+
+//echo implode("*",$nums);
+
+// $title = "অভ্যুত্থানে হতাহতদের সন্তানদের জন্য শিক্ষাপ্রতিষ্ঠানে ৫ শতাংশ কোটা";
+
+//$titleArray = explode(" ",$title);
+
+//echo implode("-",$titleArray);
+
+// echo str_replace(" ","-",$title);
+
+// echo __DIR__;
+//  include __DIR__ . "/inc/another.php";
+//  include __DIR__ . "/inc/another.php";
+//  include __DIR__ . "/inc/another.php";
+//  include __DIR__ . "/inc/another.php";
+//  include __DIR__ . "/inc/another.php";
+
+//  include_once __DIR__ . "/inc/another.php";
+//  include_once __DIR__ . "/inc/another.php";
+//  include_once __DIR__ . "/inc/another.php";
+//  include_once __DIR__ . "/inc/another.php";
+//  include_once __DIR__ . "/inc/another.php";
 
 
-echo "<h1>hello {$name}!</h1>";
 
-print("Hello, world!");
+
+//include __DIR__ . "/inc/another.php"; 
+// require __DIR__ . "/inc/another1.php"; 
+
+ 
