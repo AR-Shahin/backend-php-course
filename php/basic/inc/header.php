@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +22,12 @@
               <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
               <a class="nav-link text-light" href="./login.php">Login</a>
               <a class="nav-link text-light" href="#">Register</a>
+              <?php if(isset($_SESSION["auth"])){?>
+                <a class="nav-link text-light" href="/logout.php">Logout</a>
+              <?php }?>
             </div>
           </div>
         </div>
 </nav>
+
+

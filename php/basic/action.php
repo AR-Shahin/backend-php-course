@@ -1,6 +1,7 @@
 <?php
 
 
+session_start();
 // $_GET, $_POST, $_SERVER and $_REQUEST
 // echo $_SERVER['PHP_SELF'] . "<br>";
 // echo $_SERVER['SERVER_NAME'] . "<br>";
@@ -51,6 +52,8 @@ if(isset($_REQUEST['lgnbtn'])){
     // }
 
     if(in_array($email,$db)){
+        $_SESSION['auth'] = true;
+        $_SESSION['authUser'] = $email;
         header("Location: ./index.php");
     }else{
         echo "User not found!";

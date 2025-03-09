@@ -1,5 +1,9 @@
 <?php include './inc/header.php';?>
-
+<?php
+  if(isset($_SESSION["auth"])){
+    header("Location: index.php");
+}
+?>
 <div class="container py-4">
         <div class="row justify-content-center">
           <div class="col-md-5">

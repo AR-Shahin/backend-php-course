@@ -1,10 +1,15 @@
 
 
 <?php include './inc/header.php';?>
+<?php
+    if(!isset($_SESSION["auth"])){
+        header("Location: ./login.php");
+    }
 
+?>
     <div class="container py-4">
     <div class="row justify-content-center">
-        <div class="col-md-7">
+        <div class="col-md-8">
         <h3>User List</h3>
 
         <table class="table table-bordered table-sm mt-3 text-center">
@@ -19,10 +24,10 @@
          $users = [
             "A","B","C","D","E","F","G","H","I","J","K"
          ];
-         for($i = 0;$i<=count($users);$i++){ ?>
+         for($i = 0;$i<count($users);$i++){ ?>
             <tr>
                 <td><?= $i ?></td>
-                <td><?= $users[$i]?></td>
+                <td width="50%"><?= $users[$i]?></td>
                 <td>john@example.com</td>
                 <td>
                     <a href="#" class="btn btn-sm btn-primary">Edit</a>
