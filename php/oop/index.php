@@ -1,41 +1,55 @@
 <?php
 
-include "./User.php";
+include "./Car.php";
+
+// $c = new Car("Audi",20);
+
+// echo $c->move();
+
+interface PaymentInterface{
+    public function pay($amount);
+}
+
+class Bkash implements PaymentInterface{
+    public function pay($amount){
+        echo "Bikash payment successful for $amount";
+    }
+}
+
+class Nagad implements PaymentInterface{
+    public function pay($amount){
+        echo "Nagad payment successful for $amount";
+    }
+}
 
 
-$user1 = new User("Shahin","s@mail.com");
-$user2 = new User("Shahin2","s2@mail.com");
-
-echo $user1->carName;
-
-// echo User::PI;
-// $user1->printUni();
-// $user1->changeUni(100);
-// $user2->printUni();
-// $v1 = new Vehicle();
-// $user2 = new User("Shahin1","s1@mail.com");
-// $user2 = new User();
-
-// $user1->name = "Shahin";
-// $user1->email = "Shahin@mail.com";
-
-// $user2->name = "Ars";
-// $user2->email = "ars@mail.com";
+class Rocket implements PaymentInterface{
+    public function pay($amount){
+        echo "Rocket payment successful for $amount";
+    }
+}
 
 
-// $user1->display() . "<br>";
-// $user1->test();
-// echo $user2->display() . "<br>";
 
-// if($user1 instanceof Vehicle){
-//     echo "User1 is an instance of User class";
-// }else{
-//     echo "User1 is not an instance of User class";
+
+// function payment($amnt,$method)  {
+    
+//     if($method == "bksh"){
+//         $payObj = new Bkash();
+//         $payObj->pay($amnt);
+//     }
+//     else if($method == "rocket"){{ 
+//         (new Rocket())->pay($amnt);
+//     }}
+    
 // }
 
 
-// $user1->age = 10;
+function payment(PaymentInterface $paymentGateway,$amount) {
+    $paymentGateway->pay($amount);
+}
 
-// echo $user1->sfsdfdfage;
 
-
+payment(new Bkash(), 1000);
+payment(new Rocket(), 1000);
+payment(new Nagad(), 1000);
