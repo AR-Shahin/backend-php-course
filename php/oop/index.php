@@ -1,55 +1,62 @@
 <?php
+include "./User.php";
+include "./App/Helper/Driver.php";
 
-include "./Car.php";
+use App\Helper\Driver;
 
-// $c = new Car("Audi",20);
+(new Driver())->drive();
+class User{
 
-// echo $c->move();
-
-interface PaymentInterface{
-    public function pay($amount);
 }
 
-class Bkash implements PaymentInterface{
-    public function pay($amount){
-        echo "Bikash payment successful for $amount";
-    }
-}
-
-class Nagad implements PaymentInterface{
-    public function pay($amount){
-        echo "Nagad payment successful for $amount";
-    }
-}
-
-
-class Rocket implements PaymentInterface{
-    public function pay($amount){
-        echo "Rocket payment successful for $amount";
-    }
-}
-
-
-
-
-// function payment($amnt,$method)  {
-    
-//     if($method == "bksh"){
-//         $payObj = new Bkash();
-//         $payObj->pay($amnt);
+// trait AnotherTrait{
+//     function test1() {
+//         echo "test1 anything";
 //     }
-//     else if($method == "rocket"){{ 
-//         (new Rocket())->pay($amnt);
-//     }}
-    
+// }
+// trait PrintHelper{
+//     function print() {
+//         echo "Print anything";
+//     }
+// }
+
+// class User {
+//     // use AnotherTrait, PrintHelper; 
+//     private $name;
+//     private $email;
+
+
+//     public function setName($name) : static{
+//         $this->name = $name;
+//         return $this;
+//     }
+//     public function setEmail($email) : static{
+//         $this->email = $email;
+//         return $this;
+//     }
+
+//     public function display() : void{
+//         echo "Name $this->name" . "<br>";
+//         echo "Email $this->email";
+//     }
+//     function print() {
+//         echo "Print again" . "<br>";
+//     }
+//     function test()  {
+//         echo "test";
+//     }
 // }
 
 
-function payment(PaymentInterface $paymentGateway,$amount) {
-    $paymentGateway->pay($amount);
-}
+// $user1 = new User();
+
+// $user1->setName("Shahin");
+// $user1->setEmail("Shahin@Mail.ocm");
+
+// $user1->display();
 
 
-payment(new Bkash(), 1000);
-payment(new Rocket(), 1000);
-payment(new Nagad(), 1000);
+// (new VirtualDirectory\User)
+//     ->setName("Shahin")
+//     ->setEmail("s@Mail.com")
+//     ->display();
