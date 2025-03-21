@@ -1,62 +1,36 @@
 <?php
-include "./User.php";
-include "./App/Helper/Driver.php";
-
-use App\Helper\Driver;
-
-(new Driver())->drive();
-class User{
-
-}
-
-// trait AnotherTrait{
-//     function test1() {
-//         echo "test1 anything";
-//     }
-// }
-// trait PrintHelper{
-//     function print() {
-//         echo "Print anything";
-//     }
-// }
-
-// class User {
-//     // use AnotherTrait, PrintHelper; 
-//     private $name;
-//     private $email;
+include "./App/Book.php";
+include "./App/Library.php";
+include "./App/Member.php";
+include "./App/User.php";
 
 
-//     public function setName($name) : static{
-//         $this->name = $name;
-//         return $this;
-//     }
-//     public function setEmail($email) : static{
-//         $this->email = $email;
-//         return $this;
-//     }
-
-//     public function display() : void{
-//         echo "Name $this->name" . "<br>";
-//         echo "Email $this->email";
-//     }
-//     function print() {
-//         echo "Print again" . "<br>";
-//     }
-//     function test()  {
-//         echo "test";
-//     }
-// }
+use App\Book;
+use App\Library;
+use App\Member;
 
 
-// $user1 = new User();
+$book1 = new Book("Book 1","Shahin");
+$book2 = new Book("Book 2","Ars");
+$book3 = new Book("Book 3","Test");
 
-// $user1->setName("Shahin");
-// $user1->setEmail("Shahin@Mail.ocm");
-
-// $user1->display();
+$library = new Library();
 
 
-// (new VirtualDirectory\User)
-//     ->setName("Shahin")
-//     ->setEmail("s@Mail.com")
-//     ->display();
+$library->addBook($book1);
+$library->addBook($book2);
+$library->addBook($book3);
+
+// $library->listAvailableBooks();
+
+$member = new Member("Alice");
+
+$library->listAvailableBooks();
+$member->borrowBook($book1);
+echo " <br> ---------------- <br>";
+$library->listAvailableBooks();
+$member->returnBook($book1);
+echo " <br> ---------------- <br>";
+$library->listAvailableBooks();
+
+
