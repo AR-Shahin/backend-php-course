@@ -1,15 +1,16 @@
 <?php
-include "./App/Book.php";
-include "./App/Library.php";
-include "./App/Member.php";
-include "./App/User.php";
+// include "./App/Book.php";
+// include "./App/Library.php";
+// include "./App/Member.php";
+// include "./App/User.php";
 
+include "./vendor/autoload.php";
 
 use App\Book;
 use App\Library;
 use App\Member;
-
-
+use App\School;
+use NumberToWords\NumberToWords;
 $book1 = new Book("Book 1","Shahin");
 $book2 = new Book("Book 2","Ars");
 $book3 = new Book("Book 3","Test");
@@ -31,6 +32,14 @@ echo " <br> ---------------- <br>";
 $library->listAvailableBooks();
 $member->returnBook($book1);
 echo " <br> ---------------- <br>";
-$library->listAvailableBooks();
+// $library->listAvailableBooks();
 
 
+
+// create the number to words "manager" class
+$numberToWords = new NumberToWords();
+
+// build a new number transformer using the RFC 3066 language identifier
+$numberTransformer = $numberToWords->getNumberTransformer('en');
+
+echo $numberTransformer->toWords(100);
