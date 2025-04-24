@@ -24,7 +24,7 @@ class User {
     // 2️⃣ Get all users
     public function getAll() {
         try {
-            $stmt = $this->pdo->query("SELECT * FROM users");
+            $stmt = $this->pdo->query("SELECT * FROM users order by id desc");
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             return "Error: " . $e->getMessage();

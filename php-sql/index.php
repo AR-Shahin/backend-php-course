@@ -1,5 +1,93 @@
 <?php
+    include "./User.php";
 
+    $user  = new User();
+    $users = $user->getAll();
+?>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+    <a href="./create.php" class="btn btn-sm btn-info mb-2">Create</a>
+        <table class="table table-bordered">
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+
+            <?php
+                foreach($users as $index => $user) { 
+                  
+                    ?>
+                <tr>
+                    <td><?=++$index?></td>
+                    <td><?=$user['name']?></td>
+                    <td><?=$user['email']?></td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-success mx-1">View</a>
+                        <a href="./edit.php?id=<?= base64_encode($user['id'])?>" class="btn btn-sm btn-info mx-1">Edit</a>
+                        <form action="./Controller.php" method="POST">
+                            <input type="hidden" name="id" value="<?=$user['id']?>">
+                            <button class="btn btn-sm btn-danger mx-1 d-inline" name="delete">Delete</button>
+                        </form>
+                    </td>
+                        </tr>
+            <?php  }
+            ?>
+       
+
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+die();
 require "./User.php";
 
 $user = new User();
