@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
-    function index()  {
-        return view("about");
+    function index(Request $request)  {
+        $data = [10,30,300];
+
+        dd($request->all());
+        return view("about",
+        ["user_roll" => $data]
+    );
     }
 }

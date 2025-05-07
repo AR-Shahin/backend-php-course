@@ -1,12 +1,24 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Middleware\AgeCheckMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return redirect()->route("profile");
-    return view('welcome');
+Route::get('/', [AboutController::class,"index"]);
+
+
+
+Route::get('/user', function () {
+    //return redirect()->route("profile");
+    return "user";
+});
+
+
+
+Route::get('/admin', function () {
+    //return redirect()->route("profile");
+    return "admin";
 });
 
 

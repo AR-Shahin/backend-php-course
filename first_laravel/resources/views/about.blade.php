@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Hello about</h1>
+    {{ dd($user_roll) }}
 </body>
 </html>
