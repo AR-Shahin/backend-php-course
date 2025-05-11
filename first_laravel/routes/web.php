@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AboutController::class,"index"]);
+Route::post('/store', [AboutController::class,"store"])->name("store");
 
 
 
@@ -82,6 +83,6 @@ Route::get("/users/update",function(){
 
 
 
-Route::fallback(function(){
-    return "Route not found!";
-});
+// Route::fallback(function(){
+//     return "Route not found!";
+// });

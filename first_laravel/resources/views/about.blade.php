@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello about</h1>
-    {{ dd($user_roll) }}
+    <h1>Hello {{ $name }}</h1>
+
 </body>
 </html>
