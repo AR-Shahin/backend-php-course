@@ -1,0 +1,23 @@
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NULL,
+    product_name VARCHAR(255) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(50) DEFAULT 'Pending',
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+INSERT INTO `orders` (`id`, `user_id`, `product_name`, `amount`, `order_date`, `status`) VALUES (NULL, '1', 'Apple ', '100', CURRENT_TIMESTAMP, 'Pending'), (NULL, '3', 'Mango', '100', CURRENT_TIMESTAMP, 'Pending');
+SELECT o.id, u.name, o.product_name, o.amount
+FROM orders o
+LEFT JOIN users u ON o.user_id = u.id;
+
+SELECT u.name, u.email, o.product_name, o.amount
+FROM users u
+INNER JOIN orders o ON u.id = o.user_id;
+
+SELECT u.name, o.product_name
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id;

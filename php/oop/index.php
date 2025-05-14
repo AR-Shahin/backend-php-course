@@ -4,6 +4,18 @@
 // include "./App/Member.php";
 // include "./App/User.php";
 
+function test(&$x)  {
+    $x = 100;
+    echo "inside function $x <br>";
+}
+
+$var = 10;
+
+test($var);
+
+echo "outside function $var <br>";
+
+die();
 include "./vendor/autoload.php";
 
 use App\Book;

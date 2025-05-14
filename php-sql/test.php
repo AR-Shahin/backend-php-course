@@ -1,76 +1,118 @@
-db.php
 <?php
-$host = "localhost";
-$user = "root"; // Change if needed
-$pass = ""; // Change if needed
-$dbname = "test_db";
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+interface VehicleInterface{
+    function run();
 }
-?>
+class Engine implements VehicleInterface{
+    function run(){
 
-
-<?php
-require "db.php";
-
-
-
-$pdo = null; // Close connection
-?>
-Fetch all data 
-<?php
-require "db.php";
-
-
-$pdo = null;
-?>
-
-Single data 
-
-<?php
-require "db.php";
-
-
-$pdo = null;
-?>
-Update data 
-
-<?php
-require "db.php";
-
-$id = 1; // Change as needed
-$newName = "Jane Doe";
-$newEmail = "jane@example.com";
-
-try {
-    $stmt = $pdo->prepare("UPDATE users SET name = :name, email = :email WHERE id = :id");
-    $stmt->bindParam(":name", $newName);
-    $stmt->bindParam(":email", $newEmail);
-    $stmt->bindParam(":id", $id, PDO::PARAM_INT);
-
-    if ($stmt->execute()) {
-        echo "Record updated successfully!";
-    } else {
-        echo "No changes made.";
     }
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
 }
 
-$pdo = null;
-?>
 
-Delete data 
-<?php
-require "db.php";
+class Vehicle implements VehicleInterface{
+    function run(){
 
-$id = 1; // Change as needed
+    }
+}
 
 
+class Car{
+    public $vehicle;
 
-$pdo = null;
-?>
+    function __construct(VehicleInterface $vehicle)
+    {
+        $this->vehicle = $vehicle ;
+    }
+}
+
+class Human extends Car{
+
+}
+
+new Car(new Vehicle);
+new Car(new Engine);
+
+interface PaymentInterface{
+    function pay();
+}
+
+class Bksh implements PaymentInterface{
+    function pay() {
+        
+    }
+}
+class Nagad implements PaymentInterface{
+    function pay() {
+        
+    }
+}
+
+class Paypal implements PaymentInterface{
+    function pay() {
+        
+    }
+}
+
+$type = "circle";
+
+function payment($type)  {
+    
+    if($type == "bksh"){
+
+    }
+
+    if($type == "rocket"){
+        
+    }
+
+    if($type == "nagad"){
+        
+    }
+    if($type == "paypal"){
+        
+    }
+
+    if($type == "other"){
+        
+    }
+}
+
+function payment2(PaymentInterface $payment)  {
+    return $payment->pay();
+}
+
+
+
+payment2(new Bksh);
+payment2(new Nagad);
+payment2(new Paypal);
+
+
+
+interface Can3D{
+    function print3D();
+}
+interface Can2D{
+    function print2D();
+}
+interface PrinterInterface{
+    function print3D();
+    function print2D();
+}
+
+class SamsunngPrinter implements Can2D,Can3D{
+    function print3D()  {
+        
+    }
+
+    function print2D()  {
+        
+    }
+}
+
+class SonyPrinter implements Can3D{
+    function print3D()  {
+        
+    }
+}

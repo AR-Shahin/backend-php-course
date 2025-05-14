@@ -1,114 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./owl.css">
+    <title>Hello, world!</title>
     <style>
-      .customClass:hover{
-        background: green!important;
+      .card {
+        border-radius: 15px;
       }
-
-      .our_container{
-        width: 90%;
-        margin: 0 auto;
+      .card img{
+        border-radius: 10px;
       }
-      .our_container nav{
-        background: red;
+      .card h5{
+        margin-top: 10px;
       }
-      .our_container nav img{
-        width: 100px;
+      .card .remain{
+        color: #7B7B7E;
       }
-      .our_container nav{
-        display: flex;
-        justify-content: space-between;
+      .price{
+        color: #af4518;
       }
-      .our_container nav ul li{
-        display: inline-block;
+      .right{
+        border: 1px solid #af4518;
+        padding: 0px 5px;
       }
-      .our_container nav ul li a{
-        text-decoration: none;
-        display: inline-block;
-        padding: 10px 5px;
+      .right span{
+        margin: 0 5px;
+        color: #af4518;
+      }
+      .item{
+        width: 100%;
       }
     </style>
-</head>
-<body>
-  
-  <div class="container">
-    <nav class="navbar navbar-expand-lg bg-dark customClass">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Logo
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-       
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-glass">
+      <div class="container-fluid" bis_skin_checked="1">
+        <div class="d-flex justify-content-between align-items-center w-100" bis_skin_checked="1">
+          <div class="d-flex align-items-center" bis_skin_checked="1">
+            <a class="text-inherit d-block d-xl-none me-4" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-text-indent-right" viewBox="0 0 16 16">
+                <path d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm10.646 2.146a.5.5 0 0 1 .708.708L11.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zM2 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
+              </svg>
+            </a>
+    
+            <form role="search">
+              <label for="search" class="form-label visually-hidden">Search</label>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="search">
+            </form>
+          </div>
+          <div bis_skin_checked="1">
+            <ul class="list-unstyled d-flex align-items-center mb-0 ms-5 ms-lg-0">
+              <li class="dropdown-center">
+                <a class="position-relative btn-icon btn-ghost-secondary btn rounded-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-bell fs-5"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 ms-n2">
+                    2
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0 border-0" bis_skin_checked="1">
+                  <div class="border-bottom p-5 d-flex justify-content-between align-items-center" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                      <h5 class="mb-1">Notifications</h5>
+                      <p class="mb-0 small">You have 2 unread messages</p>
+                    </div>
+                    <a href="#!" class="text-muted">
+                      </a><a href="#" class="btn btn-ghost-secondary btn-icon rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Mark all as read">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-check2-all text-success" viewBox="0 0 16 16">
+                          <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"></path>
+                          <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"></path>
+                        </svg>
+                      </a>
+                    
+                  </div>
+                  <div data-simplebar="init" style="height: 250px" bis_skin_checked="1"><div class="simplebar-wrapper" bis_skin_checked="1" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper" bis_skin_checked="1"><div class="simplebar-height-auto-observer" bis_skin_checked="1"></div></div><div class="simplebar-mask" bis_skin_checked="1"><div class="simplebar-offset" bis_skin_checked="1" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" bis_skin_checked="1" style="height: auto; overflow: hidden;"><div class="simplebar-content" bis_skin_checked="1" style="padding: 0px;">
+                    <!-- List group -->
+                    <ul class="list-group list-group-flush notification-list-scroll fs-6">
+                      <!-- List group item -->
+                      <li class="list-group-item px-5 py-4 list-group-item-action active">
+                        <a href="#!" class="text-muted">
+                          <div class="d-flex" bis_skin_checked="1">
+                            <img src="../assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle">
+                            <div class="ms-4" bis_skin_checked="1">
+                              <p class="mb-1">
+                                <span class="text-dark">Your order is placed</span>
+                                waiting for shipping
+                              </p>
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock text-muted" viewBox="0 0 16 16">
+                                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                                </svg>
+                                <small class="ms-2">1 minute ago</small>
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-group-item px-5 py-4 list-group-item-action">
+                        <a href="#!" class="text-muted">
+                          <div class="d-flex" bis_skin_checked="1">
+                            <img src="../assets/images/avatar/avatar-5.jpg" alt="" class="avatar avatar-md rounded-circle">
+                            <div class="ms-4" bis_skin_checked="1">
+                              <p class="mb-1">
+                                <span class="text-dark">Jitu Chauhan</span>
+                                answered to your pending order list with notes
+                              </p>
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock text-muted" viewBox="0 0 16 16">
+                                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                                </svg>
+                                <small class="ms-2">2 days ago</small>
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="list-group-item px-5 py-4 list-group-item-action">
+                        <a href="#!" class="text-muted">
+                          <div class="d-flex" bis_skin_checked="1">
+                            <img src="../assets/images/avatar/avatar-2.jpg" alt="" class="avatar avatar-md rounded-circle">
+                            <div class="ms-4" bis_skin_checked="1">
+                              <p class="mb-1">
+                                <span class="text-dark">You have new messages</span>
+                                2 unread messages
+                              </p>
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock text-muted" viewBox="0 0 16 16">
+                                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                                </svg>
+                                <small class="ms-2">3 days ago</small>
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div></div></div></div><div class="simplebar-placeholder" bis_skin_checked="1" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" bis_skin_checked="1" style="visibility: hidden;"><div class="simplebar-scrollbar" bis_skin_checked="1" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" bis_skin_checked="1" style="visibility: hidden;"><div class="simplebar-scrollbar" bis_skin_checked="1" style="height: 0px; display: none;"></div></div></div>
+                  <div class="border-top px-5 py-4 text-center" bis_skin_checked="1">
+                    <a href="#!">View All</a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown ms-4">
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle">
+                </a>
+    
+                <div class="dropdown-menu dropdown-menu-end p-0" bis_skin_checked="1">
+                  <div class="lh-1 px-5 py-4 border-bottom" bis_skin_checked="1">
+                    <h5 class="mb-1 h6">FreshCart Admin</h5>
+                    <small>admindemo@email.com</small>
+                  </div>
+    
+                  <ul class="list-unstyled px-2 py-3">
+                    <li>
+                      <a class="dropdown-item" href="#!">Home</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#!">Profile</a>
+                    </li>
+    
+                    <li>
+                      <a class="dropdown-item" href="#!">Settings</a>
+                    </li>
+                  </ul>
+                  <div class="border-top px-5 py-3" bis_skin_checked="1">
+                    <a href="#">Log Out</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
-  </div>
+    <div class="container mt-5">
+      <div class="row owl-carousel">
+        <div class="col-md-3 item">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEO9cThLWN1C665S0q3b_LwRBBpgSskvWuCQ&s" alt="" class="w-100">
+              <h5>Bluvery Jam</h5>
+              <span class="remain">4 are remaining</span>
 
-  <nav aria-label="...">
-    <ul class="pagination">
-      <li class="page-item disabled">
-        <a class="page-link">Previous</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item active" aria-current="page">
-        <a class="page-link" href="#">2</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">Next</a>
-      </li>
-    </ul>
-  </nav>
-  <hr><hr>
-  <div class="our_container">
-    <nav>
-      <div>
-        <img src="https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1" alt="">
-      </div>
+              <div class="d-flex justify-content-between mt-2">
+                <div>
+                    <span class="price">$ 2.22</span>
+                </div>
+                <div  class="right">
+                  <form action="">
+                      <div>
+                        <span class="minus">-</span>
+                        <span class="minus">1</span>
+                        <span class="minus">+</span>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 item">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEO9cThLWN1C665S0q3b_LwRBBpgSskvWuCQ&s" alt="" class="w-100">
+              <h5>Bluvery Jam</h5>
+              <span class="remain">4 are remaining</span>
 
-      <div>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About us</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
+              <div class="d-flex justify-content-between mt-2">
+                <div>
+                    <span class="price">$ 2.22</span>
+                </div>
+                <div  class="right">
+                  <form action="">
+                      <div>
+                        <span class="minus">-</span>
+                        <span class="minus">1</span>
+                        <span class="minus">+</span>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 item">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEO9cThLWN1C665S0q3b_LwRBBpgSskvWuCQ&s" alt="" class="w-100">
+              <h5>Bluvery Jam</h5>
+              <span class="remain">4 are remaining</span>
+
+              <div class="d-flex justify-content-between mt-2">
+                <div>
+                    <span class="price">$ 2.22</span>
+                </div>
+                <div  class="right">
+                  <form action="">
+                      <div>
+                        <span class="minus">-</span>
+                        <span class="minus">1</span>
+                        <span class="minus">+</span>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 item">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEO9cThLWN1C665S0q3b_LwRBBpgSskvWuCQ&s" alt="" class="w-100">
+              <h5>Bluvery Jam</h5>
+              <span class="remain">4 are remaining</span>
+
+              <div class="d-flex justify-content-between mt-2">
+                <div>
+                    <span class="price">$ 2.22</span>
+                </div>
+                <div  class="right">
+                  <form action="">
+                      <div>
+                        <span class="minus">-</span>
+                        <span class="minus">1</span>
+                        <span class="minus">+</span>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-  </div>
-</body>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./owl.carousel.min.js"></script>
+
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+        stagePadding: 50,
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+    </script>
+  </body>
 </html>
