@@ -1,14 +1,16 @@
 <?php
 
-use App\Http\Controllers\AboutController;
-use App\Http\Middleware\AgeCheckMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Middleware\AgeCheckMiddleware;
 
 Route::get('/', [AboutController::class,"index"]);
 Route::post('/store', [AboutController::class,"store"])->name("store");
 
-
+Route::get("/home",[HomeController::class,"index"])->name("home");
+Route::get("/about",[HomeController::class,"about"])->name("about");
 
 Route::get('/user', function () {
     //return redirect()->route("profile");
@@ -29,7 +31,7 @@ Route::get('/admin', function () {
 
 
 
-Route::get("/about",[AboutController::class,"index"]);
+// Route::get("/about",[AboutController::class,"index"]);
 
 Route::get("profile",function(){
     return "Profile";
