@@ -15,6 +15,17 @@ class AboutController extends Controller
        return view("welcome");
     }
 
+     function dashboard(Request $request)  {
+
+       return view("dashboard");
+    }
+
+    function user()  {
+        return view("user");
+    }
+    function login()  {
+        return view("login");
+    }
 
     function store(Request $request) {
 

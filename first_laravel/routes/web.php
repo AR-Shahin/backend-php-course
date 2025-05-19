@@ -6,16 +6,14 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Middleware\AgeCheckMiddleware;
 
-Route::get('/', [AboutController::class,"index"]);
+Route::get('/login', [AboutController::class,"login"]);
+Route::get('/', [AboutController::class,"dashboard"]);
+Route::get('/user', [AboutController::class,"user"]);
 Route::post('/store', [AboutController::class,"store"])->name("store");
 
 Route::get("/home",[HomeController::class,"index"])->name("home");
 Route::get("/about",[HomeController::class,"about"])->name("about");
 
-Route::get('/user', function () {
-    //return redirect()->route("profile");
-    return "user";
-});
 
 
 
