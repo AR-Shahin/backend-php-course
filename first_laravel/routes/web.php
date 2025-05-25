@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Middleware\AgeCheckMiddleware;
 
 Route::get('/login', [AboutController::class,"login"]);
@@ -86,3 +87,7 @@ Route::get("/users/update",function(){
 // Route::fallback(function(){
 //     return "Route not found!";
 // });
+
+
+Route::get('/category',[CategoryController::class,"index"])->name("category.index");
+Route::post('/category-store',[CategoryController::class,"store"])->name("category.store");
